@@ -79,14 +79,14 @@ const Navbar = () => {
             </div>
           </Link>
 
-          {/* Full Campus Location for Desktop */}
-          <div className="hidden lg:flex gap-3 items-center max-w-xs">
-             <MapPin size={24} className="text-blue-200 flex-shrink-0" />
+          {/* Full Campus Address Link for Desktop */}
+          <a hhref="https://maps.app.goo.gl/2zV2fLAfQxTD2Drj7" target="_blank" rel="noopener noreferrer" className="hidden lg:flex gap-3 items-center max-w-xs group/loc transition-all">
+             <MapPin size={24} className="text-blue-200 flex-shrink-0 group-hover/loc:text-blue-600 transition-colors" />
              <div className="flex flex-col">
                 <span className="text-[10px] uppercase font-bold text-slate-400 tracking-widest leading-none mb-1">Campus Address</span>
-                <span className="text-[11px] font-black text-blue-950 leading-tight">Assam Road, Semarahana, Nainiha, Mihinpurwa (Bahraich)</span>
+                <span className="text-[11px] font-black text-blue-950 leading-tight group-hover/loc:text-blue-700 transition-colors">Assam Road, Semarahana, Nainiha, Mihinpurwa (Bahraich)</span>
              </div>
-          </div>
+          </a>
 
           {/* Mobile Toggle */}
           <button

@@ -31,7 +31,7 @@ const Footer = () => {
               <div className="bg-white p-1 rounded-lg w-12 h-12 flex items-center justify-center">
                 <img src="/logo.png" alt="SSPS Logo" className="w-full h-full object-contain mix-blend-multiply" />
               </div>
-              <span className="text-xl font-bold text-white uppercase tracking-wider">SSPS</span>
+              <span className="text-lg font-bold text-white uppercase tracking-wider leading-tight">Sanjivani Sports <br />Public School</span>
             </Link>
 
             <div className="text-sm border-l-2 border-blue-600 pl-4 py-1 italic text-slate-400">
@@ -55,12 +55,21 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold text-lg mb-6 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-1 after:bg-blue-600">Quick Links</h4>
             <ul className="space-y-4 text-sm">
-              <li><Link href="/about" className="hover:text-blue-500 transition-colors">About Our School</Link></li>
-              <li><Link href="/academics" className="hover:text-blue-500 transition-colors">Academic Programs</Link></li>
-              <li><Link href="/hostel" className="hover:text-blue-500 transition-colors">Residential Facilities</Link></li>
-              <li><Link href="/admissions" className="hover:text-blue-500 transition-colors">Admission Process</Link></li>
-              <li><Link href="/gallery" className="hover:text-blue-500 transition-colors">Photo Gallery</Link></li>
-              <li><Link href="/notices" className="hover:text-blue-500 transition-colors">Latest Notices</Link></li>
+              {[
+                { name: 'About Our School', href: '/about' },
+                { name: 'Academic Programs', href: '/academics' },
+                { name: 'Residential Facilities', href: '/hostel' },
+                { name: 'Admission Process', href: '/admissions' },
+                { name: 'Photo Gallery', href: '/gallery' },
+                { name: 'Latest Notices', href: '/notices' },
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href} className="hover:text-blue-500 transition-all flex items-center gap-2 group">
+                    <span className="w-1.5 h-1.5 bg-blue-600 rounded-full group-hover:w-3 transition-all"></span>
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -68,11 +77,20 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold text-lg mb-6 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-1 after:bg-blue-600">Student Life</h4>
             <ul className="space-y-4 text-sm">
-              <li><Link href="/facilities" className="hover:text-blue-500 transition-colors">Campus Facilities</Link></li>
-              <li><Link href="/sports" className="hover:text-blue-500 transition-colors">Sports Infrastructure</Link></li>
-              <li><Link href="/contact" className="hover:text-blue-500 transition-colors">Contact Support</Link></li>
-              <li><Link href="/#faq" className="hover:text-blue-500 transition-colors">FAQs</Link></li>
-              <li><Link href="/#transport" className="hover:text-blue-500 transition-colors">Transport Route</Link></li>
+              {[
+                { name: 'Campus Facilities', href: '/facilities' },
+                { name: 'Sports Infrastructure', href: '/sports' },
+                { name: 'Contact Support', href: '/contact' },
+                { name: 'FAQs', href: '/#faq' },
+                { name: 'Transport Route', href: '/#transport' },
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href} className="hover:text-blue-500 transition-all flex items-center gap-2 group">
+                    <span className="w-1.5 h-1.5 bg-blue-600 rounded-full group-hover:w-3 transition-all"></span>
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
