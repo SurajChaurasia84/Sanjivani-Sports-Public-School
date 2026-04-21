@@ -102,19 +102,34 @@ const Navbar = () => {
       <nav className={`hidden lg:block transition-all duration-300 border-t border-slate-100 ${scrolled ? 'bg-white shadow-xl py-0' : 'bg-white py-1'}`}>
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-2">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className={`px-4 py-4 text-[11px] font-bold uppercase tracking-widest transition-all duration-200 border-b-2 flex items-center ${
-                  pathname === link.href
-                    ? 'text-blue-700 border-blue-600 bg-blue-50/50'
-                    : 'text-slate-500 border-transparent hover:text-blue-700 hover:bg-slate-50 hover:border-blue-200'
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={`px-5 py-5 text-[11px] font-bold uppercase tracking-widest transition-all duration-200 flex flex-col items-center justify-center relative group ${
+                    isActive ? 'text-blue-700 font-black' : 'text-slate-500 hover:text-blue-700'
+                  }`}
+                >
+                  <span className="relative">
+                    {link.name}
+                    {/* Active Indicator Line (Matches Text Width) */}
+                    {isActive && (
+                      <motion.div 
+                        layoutId="navIndicator"
+                        className="absolute -bottom-2 left-0 right-0 h-[3px] bg-blue-600 rounded-full"
+                        transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
+                      />
+                    )}
+                    {/* Hover Indicator (Subtle) */}
+                    {!isActive && (
+                      <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-[3px] bg-blue-200 rounded-full group-hover:w-full transition-all duration-300" />
+                    )}
+                  </span>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </nav>
