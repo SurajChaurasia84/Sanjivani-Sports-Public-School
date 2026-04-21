@@ -100,7 +100,7 @@ const Footer = () => {
             <ul className="space-y-6 text-sm">
               <li className="flex gap-3">
                 <MapPin className="text-blue-500 flex-shrink-0" size={20} />
-                <span>Assam Road, Semarahana, Nainiha, Mihinpurwa (Bahraich)</span>
+                <a href="https://maps.app.goo.gl/2zV2fLAfQxTD2Drj7" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">Assam Road, Semarahana, Nainiha, Mihinpurwa (Bahraich)</a>
               </li>
               <li className="flex gap-3">
                 <Phone className="text-blue-500 flex-shrink-0" size={20} />

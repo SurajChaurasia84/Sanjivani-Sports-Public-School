@@ -80,7 +80,7 @@ const Navbar = () => {
           </Link>
 
           {/* Full Campus Address Link for Desktop */}
-          <a hhref="https://maps.app.goo.gl/2zV2fLAfQxTD2Drj7" target="_blank" rel="noopener noreferrer" className="hidden lg:flex gap-3 items-center max-w-xs group/loc transition-all">
+          <a href="https://maps.app.goo.gl/2zV2fLAfQxTD2Drj7" target="_blank" rel="noopener noreferrer" className="hidden lg:flex gap-3 items-center max-w-xs group/loc transition-all">
              <MapPin size={24} className="text-blue-200 flex-shrink-0 group-hover/loc:text-blue-600 transition-colors" />
              <div className="flex flex-col">
                 <span className="text-[10px] uppercase font-bold text-slate-400 tracking-widest leading-none mb-1">Campus Address</span>
@@ -172,9 +172,9 @@ const Navbar = () => {
                  <div className="space-y-3">
                     <a href="tel:09453544852" className="font-bold flex items-center gap-3"><Phone size={16} className="text-blue-400"/> 09453544852</a>
                     <a href="mailto:sanjivanipublicschool2014@gmail.com" className="text-sm flex items-center gap-3"><Mail size={16} className="text-blue-400"/> sanjivanipublicschool2014@gmail.com</a>
-                    <p className="text-xs text-blue-200/70 flex items-center gap-3 leading-relaxed mt-4">
+                    <a href="https://maps.app.goo.gl/2zV2fLAfQxTD2Drj7" target="_blank" rel="noopener noreferrer" className="text-xs text-blue-200/70 flex items-center gap-3 leading-relaxed mt-4 hover:text-white transition-colors">
                       <MapPin size={16} className="text-blue-400 flex-shrink-0"/> Assam Road, Semarahana, Nainiha, Mihinpurwa (Bahraich)
-                    </p>
+                    </a>
                  </div>
               </div>
             </div>

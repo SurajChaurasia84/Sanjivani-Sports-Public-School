@@ -36,7 +36,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="text-lg font-bold text-slate-900 mb-1">Our Location</h4>
-                    <p className="text-slate-600 leading-relaxed font-medium">cAssam Road, Semarahana, Nainiha, Mihinpurwa (Bahraich)</p>
+                    <a href="https://maps.app.goo.gl/2zV2fLAfQxTD2Drj7" target="_blank" rel="noopener noreferrer" className="text-slate-600 leading-relaxed font-medium hover:text-blue-600 transition-colors">Assam Road, Semarahana, Nainiha, Mihinpurwa (Bahraich)</a>
                   </div>
                 </div>
                 <div className="flex gap-6 items-start">
@@ -93,19 +93,21 @@ export default function ContactPage() {
       </Section>
 
 
-      {/* Map Section (Placeholder) */}
-      <div className="w-full h-[500px] bg-slate-200 relative overflow-hidden group">
-        {/* Placeholder for Google Map */}
-        <div className="absolute inset-0 bg-[url('https://maps.googleapis.com/maps/api/staticmap?center=28.1884,81.2828&zoom=13&size=1600x500&sensor=false')] bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-1000"></div>
-        <div className="absolute inset-0 bg-blue-900/10 pointer-events-none"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none">
-           <div className="bg-white p-6 rounded-full shadow-2xl relative">
-              <MapPin size={48} className="text-blue-600 animate-bounce" />
-              <div className="absolute -bottom-28 left-1/2 -translate-x-1/2 bg-white px-6 py-4 rounded-2xl shadow-2xl w-[300px] opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
-                <p className="font-bold text-slate-900">Sanjivani Sports Public School</p>
-                <p className="text-xs text-slate-500 mt-1">Visit our campus today!</p>
-              </div>
-           </div>
+      {/* Map Section - Official Google Maps Embed */}
+      <div className="w-full h-[500px] border-t border-slate-100 shadow-inner group relative overflow-hidden">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3522.258875239489!2d81.30156247992012!3d28.016562510944315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3998938040000001%3A0xebb3ef11576daa43!2sSanjivani%20Sports%20Public%20School%20%26%20Hostel!5e0!3m2!1sen!2sin!4v1776781131073!5m2!1sen!2sin" 
+          className="w-full h-full grayscale hover:grayscale-0 transition-all duration-700" 
+          style={{ border: 0 }} 
+          allowFullScreen="" 
+          loading="lazy" 
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <div className="absolute top-6 left-6 pointer-events-none">
+          <div className="bg-white/90 backdrop-blur-md px-6 py-4 rounded-2xl shadow-2xl border border-white/50">
+            <p className="font-black text-blue-950 uppercase tracking-tight">Visit Our Campus</p>
+            <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest mt-1">Sanjivani Sports Public School</p>
+          </div>
         </div>
       </div>
     </div>
