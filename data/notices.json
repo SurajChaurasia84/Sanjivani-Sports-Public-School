@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Admissions Open for Session 2026-27",
+    "date": "2026-04-15",
+    "description": "Admissions are now open for the upcoming academic session. Forms are available at the school office.",
+    "isUrgent": true
+  },
+  {
+    "id": 2,
+    "title": "Summer Camp 2026",
+    "date": "2026-04-10",
+    "description": "Registration for the Annual Sports Summer Camp is now open. Events include Cricket, Football, and Athletics.",
+    "isUrgent": false
+  },
+  {
+    "id": 3,
+    "title": "Parent-Teacher Meeting (PTM)",
+    "date": "2026-05-02",
+    "description": "The first PTM for the new session will be held on May 2nd. Timing: 9:00 AM to 12:00 PM.",
+    "isUrgent": false
+  }
+]

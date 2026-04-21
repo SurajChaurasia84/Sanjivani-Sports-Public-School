@@ -1,0 +1,22 @@
+{
+  "curriculumOverview": "We follow the CBSE curriculum, offering a comprehensive and balanced approach to education from Primary to Senior Secondary levels.",
+  "schemeOfStudies": [
+    {
+      "level": "Primary (I-V)",
+      "subjects": ["English", "Hindi", "Mathematics", "EVS", "Art", "Physical Education"]
+    },
+    {
+      "level": "Middle (VI-VIII)",
+      "subjects": ["English", "Hindi", "Sanskrit", "Mathematics", "Science", "Social Science", "Computer Science"]
+    },
+    {
+      "level": "Secondary (IX-X)",
+      "subjects": ["English", "Hindi/Sanskrit", "Mathematics", "Science", "Social Science", "Information Technology"]
+    }
+  ],
+  "evaluationSystem": {
+    "term1": "May to September, culminating in Half-Yearly Examinations.",
+    "term2": "October to March, culminating in Annual Examinations.",
+    "weightage": "Continuous and Comprehensive Evaluation (CCE) including Unit Tests, Assignments, and Term Exams."
+  }
+}

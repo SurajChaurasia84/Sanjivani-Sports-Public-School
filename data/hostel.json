@@ -1,0 +1,29 @@
+{
+  "overview": "SSPS provides a home away from home with its modern hostel facilities, ensuring a safe and comfortable environment for students from across the region.",
+  "facilities": [
+    {
+      "name": "Dormitories",
+      "description": "Spacious, well-ventilated rooms with individual storage and study desks."
+    },
+    {
+      "name": "Dining",
+      "description": "Nutritious and balanced vegetarian meals prepared in a hygienic kitchen."
+    },
+    {
+      "name": "Medical",
+      "description": "24/7 medical assistance and regular health check-ups."
+    },
+    {
+      "name": "Security",
+      "description": "CCTV surveillance and round-the-clock security personnel."
+    },
+    {
+      "name": "Recreation",
+      "description": "Common room with TV, indoor games, and scheduled recreational activities."
+    },
+    {
+      "name": "Academic Support",
+      "description": "Supervised study hours and extra coaching for residential students."
+    }
+  ]
+}

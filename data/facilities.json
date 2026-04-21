@@ -1,0 +1,40 @@
+{
+  "facilities": [
+    {
+      "id": "smart-classes",
+      "name": "Smart Classes",
+      "description": "Interactive digital boards in every classroom to make learning engaging and effective.",
+      "icon": "Monitor"
+    },
+    {
+      "id": "playground",
+      "name": "Vast Playground",
+      "description": "Multi-sport fields for football, cricket, and athletics to promote physical fitness.",
+      "icon": "Trophy"
+    },
+    {
+      "id": "labs",
+      "name": "Science & Computer Labs",
+      "description": "Well-equipped laboratories for practical learning in Science and Information Technology.",
+      "icon": "FlaskConical"
+    },
+    {
+      "id": "library",
+      "name": "Modern Library",
+      "description": "A collection of thousands of books, journals, and digital resources.",
+      "icon": "BookOpen"
+    },
+    {
+      "id": "medical",
+      "name": "Medical Room",
+      "description": "First-aid and regular health check-ups for all students.",
+      "icon": "Stethoscope"
+    },
+    {
+      "id": "transport",
+      "name": "School Transport",
+      "description": "Safe and reliable bus service covering nearby towns and villages.",
+      "icon": "Bus"
+    }
+  ]
+}
