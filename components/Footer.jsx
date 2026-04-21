@@ -1,6 +1,22 @@
 import React from 'react';
 import Link from 'next/link';
-import { GraduationCap, Mail, Phone, MapPin, Globe, Share2 } from 'lucide-react';
+import { GraduationCap, Mail, Phone, MapPin, Globe } from 'lucide-react';
+
+const YoutubeIcon = ({ size = 24 }) => (
+  <svg 
+    width={size} 
+    height={size} 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round"
+  >
+    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.11 1 12 1 12s0 3.89.46 5.58a2.78 2.78 0 0 0 1.94 2C5.12 20 12 20 12 20s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.89 23 12 23 12s0-3.89-.46-5.58z" />
+    <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" />
+  </svg>
+);
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,65 +27,73 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* School Info */}
           <div className="space-y-6">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="bg-emerald-600 p-2 rounded-lg text-white">
-                <GraduationCap size={24} />
+            <Link href="/" className="flex items-center gap-3">
+              <div className="bg-white p-1 rounded-lg w-12 h-12 flex items-center justify-center">
+                <img src="/logo.png" alt="SSPS Logo" className="w-full h-full object-contain mix-blend-multiply" />
               </div>
               <span className="text-xl font-bold text-white uppercase tracking-wider">SSPS</span>
             </Link>
-            <p className="text-sm leading-relaxed">
-              Sanjivani Sports Public School is dedicated to excellence in education and sports. We nurture the leaders of tomorrow with a balanced focus on academics and physical growth.
+
+            <div className="text-sm border-l-2 border-blue-600 pl-4 py-1 italic text-slate-400">
+              Established by: <strong>Viklang Sewa Evam Technical Shiksha Sansthan</strong>
+            </div>
+
+            <p className="text-sm leading-relaxed text-slate-400">
+              Sanjivani Sports Public School is dedicated to excellence in education and sports, nurturing the leaders of tomorrow with a balanced focus on academics and physical growth.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 bg-slate-800 flex items-center justify-center rounded-full hover:bg-emerald-600 hover:text-white transition-all transform hover:scale-110">
-                <Globe size={18} />
+              <a href="https://www.youtube.com/@sanjivanisportspublicschoo1163" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-slate-800 flex items-center justify-center rounded-full hover:bg-red-600 hover:text-white transition-all transform hover:scale-110">
+                <YoutubeIcon size={18} />
               </a>
-              <a href="#" className="w-10 h-10 bg-slate-800 flex items-center justify-center rounded-full hover:bg-emerald-600 hover:text-white transition-all transform hover:scale-110">
-                <Share2 size={18} />
+              <a href="#" className="w-10 h-10 bg-slate-800 flex items-center justify-center rounded-full hover:bg-blue-600 hover:text-white transition-all transform hover:scale-110">
+                <Globe size={18} />
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-bold text-lg mb-6 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-1 after:bg-emerald-600">Quick Links</h4>
+            <h4 className="text-white font-bold text-lg mb-6 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-1 after:bg-blue-600">Quick Links</h4>
             <ul className="space-y-4 text-sm">
-              <li><Link href="/about" className="hover:text-emerald-500 transition-colors">About Our School</Link></li>
-              <li><Link href="/academics" className="hover:text-emerald-500 transition-colors">Academic Programs</Link></li>
-              <li><Link href="/hostel" className="hover:text-emerald-500 transition-colors">Residential Facilities</Link></li>
-              <li><Link href="/admissions" className="hover:text-emerald-500 transition-colors">Admission Process</Link></li>
-              <li><Link href="/gallery" className="hover:text-emerald-500 transition-colors">Photo Gallery</Link></li>
-              <li><Link href="/notices" className="hover:text-emerald-500 transition-colors">Latest Notices</Link></li>
+              <li><Link href="/about" className="hover:text-blue-500 transition-colors">About Our School</Link></li>
+              <li><Link href="/academics" className="hover:text-blue-500 transition-colors">Academic Programs</Link></li>
+              <li><Link href="/hostel" className="hover:text-blue-500 transition-colors">Residential Facilities</Link></li>
+              <li><Link href="/admissions" className="hover:text-blue-500 transition-colors">Admission Process</Link></li>
+              <li><Link href="/gallery" className="hover:text-blue-500 transition-colors">Photo Gallery</Link></li>
+              <li><Link href="/notices" className="hover:text-blue-500 transition-colors">Latest Notices</Link></li>
             </ul>
           </div>
 
           {/* Useful Links */}
           <div>
-            <h4 className="text-white font-bold text-lg mb-6 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-1 after:bg-emerald-600">Student Life</h4>
+            <h4 className="text-white font-bold text-lg mb-6 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-1 after:bg-blue-600">Student Life</h4>
             <ul className="space-y-4 text-sm">
-              <li><Link href="/facilities" className="hover:text-emerald-500 transition-colors">Campus Facilities</Link></li>
-              <li><Link href="/sports" className="hover:text-emerald-500 transition-colors">Sports Infrastructure</Link></li>
-              <li><Link href="/contact" className="hover:text-emerald-500 transition-colors">Contact Support</Link></li>
-              <li><Link href="/#faq" className="hover:text-emerald-500 transition-colors">FAQs</Link></li>
-              <li><Link href="/#transport" className="hover:text-emerald-500 transition-colors">Transport Route</Link></li>
+              <li><Link href="/facilities" className="hover:text-blue-500 transition-colors">Campus Facilities</Link></li>
+              <li><Link href="/sports" className="hover:text-blue-500 transition-colors">Sports Infrastructure</Link></li>
+              <li><Link href="/contact" className="hover:text-blue-500 transition-colors">Contact Support</Link></li>
+              <li><Link href="/#faq" className="hover:text-blue-500 transition-colors">FAQs</Link></li>
+              <li><Link href="/#transport" className="hover:text-blue-500 transition-colors">Transport Route</Link></li>
             </ul>
           </div>
 
           {/* Contact Details */}
           <div>
-            <h4 className="text-white font-bold text-lg mb-6 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-1 after:bg-emerald-600">Get In Touch</h4>
+            <h4 className="text-white font-bold text-lg mb-6 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-1 after:bg-blue-600">Get In Touch</h4>
             <ul className="space-y-6 text-sm">
               <li className="flex gap-3">
-                <MapPin className="text-emerald-500 flex-shrink-0" size={20} />
-                <span>Semrahana, Mihinpurwa, Bahraich (U.P.), India</span>
+                <MapPin className="text-blue-500 flex-shrink-0" size={20} />
+                <span>Assam Road, Semarahana, Nainiha, Mihinpurwa (Bahraich)</span>
               </li>
               <li className="flex gap-3">
-                <Phone className="text-emerald-500 flex-shrink-0" size={20} />
-                <span>+91-XXXXXXXXXX, +91-XXXXXXXXXX</span>
+                <Phone className="text-blue-500 flex-shrink-0" size={20} />
+                <div className="flex flex-col gap-1">
+                  <a href="tel:09453544852" className="hover:text-blue-500 transition-colors">09453544852</a>
+                  <a href="tel:09453543819" className="hover:text-blue-500 transition-colors">09453543819</a>
+                </div>
               </li>
               <li className="flex gap-3">
-                <Mail className="text-emerald-500 flex-shrink-0" size={20} />
-                <span>info@ssps-school.edu.in</span>
+                <Mail className="text-blue-500 flex-shrink-0" size={20} />
+                <a href="mailto:sanjivanipublicschool2014@gmail.com" className="break-all font-medium hover:text-blue-500 transition-colors">sanjivanipublicschool2014@gmail.com</a>
               </li>
             </ul>
           </div>

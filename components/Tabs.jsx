@@ -15,7 +15,7 @@ const Tabs = ({ tabs }) => {
             onClick={() => setActiveTab(index)}
             className={`px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 ${
               activeTab === index
-                ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-200 ring-2 ring-emerald-600 ring-offset-2'
+                ? 'bg-blue-600 text-white shadow-lg shadow-blue-200 ring-2 ring-blue-600 ring-offset-2'
                 : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
             }`}
           >

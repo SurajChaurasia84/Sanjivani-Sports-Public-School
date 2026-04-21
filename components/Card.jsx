@@ -15,7 +15,7 @@ const Card = ({ title, description, icon: Icon, imageUrl, children, className = 
       )}
       <div className="p-6">
         {Icon && (
-          <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-lg flex items-center justify-center mb-4">
+          <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-4">
             <Icon size={24} />
           </div>
         )}

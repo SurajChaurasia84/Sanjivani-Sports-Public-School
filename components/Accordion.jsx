@@ -10,11 +10,11 @@ const AccordionItem = ({ title, content, isOpen, onClick }) => {
       <button
         onClick={onClick}
         className={`w-full flex items-center justify-between p-5 text-left transition-colors ${
-          isOpen ? 'bg-emerald-50 text-emerald-900 font-bold' : 'bg-white text-slate-700 hover:bg-slate-50'
+          isOpen ? 'bg-blue-50 text-blue-900 font-bold' : 'bg-white text-slate-700 hover:bg-slate-50'
         }`}
       >
         <span className="text-lg">{title}</span>
-        {isOpen ? <ChevronUp className="text-emerald-600" /> : <ChevronDown className="text-slate-400" />}
+        {isOpen ? <ChevronUp className="text-blue-600" /> : <ChevronDown className="text-slate-400" />}
       </button>
       <AnimatePresence>
         {isOpen && (
