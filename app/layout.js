@@ -15,11 +15,11 @@ const outfit = Outfit({
 
 export const metadata = {
   title: {
-    default: "Sanjivani Sports Public School | Semrahana, Bahraich",
+    default: "Sanjivani Sports Public School | Mihinpurwa, Bahraich",
     template: "%s | Sanjivani Sports Public School"
   },
-  description: "SSPS Semrahana, Mihinpurwa, Bahraich - Empowering students through holistic education and sports excellence.",
-  keywords: ["School", "Sanjivani Sports Public School", "Semrahana", "Mihinpurwa", "Bahraich", "UP School", "Sports School"],
+  description: "SSPS Assam Road, Semarahana, Nainiha, Mihinpurwa (Bahraich) - Empowering students through holistic education and sports excellence.",
+  keywords: ["School", "Sanjivani Sports Public School", "Semarahana", "Mihinpurwa", "Bahraich", "UP School", "Sports School"],
 };
 
 export default function RootLayout({ children }) {

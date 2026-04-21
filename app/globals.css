@@ -34,6 +34,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-emerald-600/30 rounded-full hover:bg-emerald-600/50 transition-colors;
+  @apply bg-blue-900/30 rounded-full hover:bg-blue-950/50 transition-colors;
 }
+
 
