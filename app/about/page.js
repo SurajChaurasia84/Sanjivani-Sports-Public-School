@@ -14,9 +14,9 @@ export default async function AboutPage() {
   return (
     <div className="bg-white">
       {/* Page Header */}
-      <div className="bg-emerald-900 py-20 text-white text-center">
+      <div className="bg-blue-900 py-20 text-white text-center">
         <h1 className="text-4xl md:text-5xl font-bold font-display uppercase tracking-widest">About Our School</h1>
-        <div className="w-24 h-1.5 bg-emerald-500 mx-auto mt-6 rounded-full"></div>
+        <div className="w-24 h-1.5 bg-blue-500 mx-auto mt-6 rounded-full"></div>
       </div>
 
       {/* About School */}
@@ -27,10 +27,10 @@ export default async function AboutPage() {
               {data.about}
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-emerald-50 p-8 rounded-2xl border-l-4 border-emerald-600 shadow-sm">
+              <div className="bg-blue-50 p-8 rounded-2xl border-l-4 border-blue-600 shadow-sm">
                 <div className="flex items-center gap-3 mb-4">
-                  <Target className="text-emerald-700" size={32} />
-                  <h3 className="text-xl font-bold text-emerald-900">Our Vision</h3>
+                  <Target className="text-blue-700" size={32} />
+                  <h3 className="text-xl font-bold text-blue-900">Our Vision</h3>
                 </div>
                 <p className="text-slate-600 italic">"{data.vision}"</p>
               </div>
@@ -49,7 +49,7 @@ export default async function AboutPage() {
               alt="School Campus" 
               className="rounded-3xl shadow-2xl relative z-10"
             />
-            <div className="absolute -top-6 -right-6 w-full h-full border-4 border-emerald-100 rounded-3xl -z-0"></div>
+            <div className="absolute -top-6 -right-6 w-full h-full border-4 border-blue-100 rounded-3xl -z-0"></div>
           </div>
         </div>
       </Section>
@@ -63,26 +63,26 @@ export default async function AboutPage() {
             { role: 'Principal', message: data.principalMessage, name: 'Dr. Principal Name' }
           ].map((leader, i) => (
             <div key={i} className="bg-white p-10 rounded-3xl shadow-lg border border-slate-100 flex flex-col items-center text-center">
-              <div className="w-24 h-24 bg-emerald-100 rounded-full mb-6 overflow-hidden border-4 border-emerald-50 flex items-center justify-center">
+              <div className="w-24 h-24 bg-blue-100 rounded-full mb-6 overflow-hidden border-4 border-blue-50 flex items-center justify-center">
                 <img 
-                  src={`https://ui-avatars.com/api/?name=${leader.name}&background=10b981&color=fff&size=128`} 
+                  src={`https://ui-avatars.com/api/?name=${leader.name}&background=1e3a8a&color=fff&size=128`} 
                   alt={leader.name}
                   className="w-full h-full object-cover"
                 />
               </div>
-              <Quote className="text-emerald-200 mb-4" size={40} />
+              <Quote className="text-blue-200 mb-4" size={40} />
               <p className="text-slate-600 text-lg mb-8 leading-relaxed italic">
                 {leader.message}
               </p>
               <h4 className="text-xl font-bold text-slate-900">{leader.name}</h4>
-              <span className="text-emerald-600 font-bold uppercase tracking-widest text-xs mt-2">{leader.role}</span>
+              <span className="text-blue-600 font-bold uppercase tracking-widest text-xs mt-2">{leader.role}</span>
             </div>
           ))}
         </div>
       </Section>
 
       {/* Stats Counter (Static) */}
-      <Section className="bg-emerald-900 text-white">
+      <Section className="bg-blue-900 text-white">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
           {[
             { label: 'Students', value: '500+' },
@@ -91,7 +91,7 @@ export default async function AboutPage() {
             { label: 'Founded In', value: '2015' }
           ].map((stat, i) => (
             <div key={i}>
-              <p className="text-5xl font-bold font-display text-emerald-400 mb-2">{stat.value}</p>
+              <p className="text-5xl font-bold font-display text-blue-400 mb-2">{stat.value}</p>
               <p className="text-slate-300 uppercase tracking-widest text-sm font-bold">{stat.label}</p>
             </div>
           ))}
