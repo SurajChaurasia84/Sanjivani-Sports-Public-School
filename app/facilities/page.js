@@ -24,13 +24,13 @@ export default async function FacilitiesPage() {
   return (
     <div className="bg-white">
       {/* Page Header */}
-      <div className="bg-emerald-900 py-24 text-white text-center relative overflow-hidden">
+      <div className="bg-blue-900 py-24 text-white text-center relative overflow-hidden">
         <div className="relative z-10">
           <h1 className="text-5xl md:text-6xl font-bold font-display uppercase tracking-widest mb-6">Our Infrastructure</h1>
-          <p className="text-xl text-emerald-100 max-w-3xl mx-auto opacity-80 leading-relaxed px-4">
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto opacity-80 leading-relaxed px-4">
             World-class facilities designed to foster academic growth and athletic excellence.
           </p>
-          <div className="w-24 h-1.5 bg-emerald-500 mx-auto mt-8 rounded-full"></div>
+          <div className="w-24 h-1.5 bg-blue-500 mx-auto mt-8 rounded-full"></div>
         </div>
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
       </div>
@@ -45,9 +45,9 @@ export default async function FacilitiesPage() {
                   title={facility.name}
                   description={facility.description}
                   icon={Icon}
-                  className="h-full border-2 border-slate-100 hover:border-emerald-200 transition-all duration-500"
+                  className="h-full border-2 border-slate-100 hover:border-blue-200 transition-all duration-500"
                 />
-                <div className="absolute -top-3 -right-3 w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center text-white scale-0 group-hover:scale-100 transition-transform duration-300 shadow-lg">
+                <div className="absolute -top-3 -right-3 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white scale-0 group-hover:scale-100 transition-transform duration-300 shadow-lg">
                   <Sparkles size={20} />
                 </div>
               </div>
@@ -62,7 +62,7 @@ export default async function FacilitiesPage() {
           <div className="flex flex-col lg:flex-row gap-20 items-center">
             <div className="flex-1 space-y-12">
               <div className="space-y-6">
-                <h2 className="text-4xl md:text-5xl font-bold font-display leading-tight">Technology-Driven <br/><span className="text-emerald-400">Learning Spaces</span></h2>
+                <h2 className="text-4xl md:text-5xl font-bold font-display leading-tight">Technology-Driven <br/><span className="text-blue-400">Learning Spaces</span></h2>
                 <p className="text-slate-400 text-lg leading-relaxed">
                   Our smart classrooms are equipped with the latest interactive technology, bringing complex concepts to life with vivid visuals and hands-on digital interactions.
                 </p>
@@ -74,22 +74,22 @@ export default async function FacilitiesPage() {
                   'Fully Equipped IT Laboratory',
                   'Multimedia Resource Center'
                 ].map((item, idx) => (
-                  <li key={idx} className="flex items-center gap-4 text-emerald-100 font-medium">
-                    <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
+                  <li key={idx} className="flex items-center gap-4 text-blue-100 font-medium">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                     {item}
                   </li>
                 ))}
               </ul>
             </div>
             <div className="flex-1 relative">
-              <div className="relative z-10 rounded-3xl overflow-hidden shadow-[0_0_50px_-12px_rgba(16,185,129,0.5)] border border-emerald-500/30">
+              <div className="relative z-10 rounded-3xl overflow-hidden shadow-[0_0_50px_-12px_rgba(16,185,129,0.5)] border border-blue-500/30">
                 <img 
                   src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200" 
                   alt="Smart Classroom" 
                   className="w-full h-auto"
                 />
               </div>
-              <div className="absolute -top-12 -right-12 w-64 h-64 bg-emerald-600 rounded-full blur-[100px] opacity-20 -z-0"></div>
+              <div className="absolute -top-12 -right-12 w-64 h-64 bg-blue-600 rounded-full blur-[100px] opacity-20 -z-0"></div>
               <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-blue-600 rounded-full blur-[100px] opacity-20 -z-0"></div>
             </div>
           </div>
@@ -105,9 +105,9 @@ export default async function FacilitiesPage() {
               alt="Cricket Training" 
               className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-emerald-900 to-transparent p-10 flex flex-col justify-end">
+            <div className="absolute inset-0 bg-gradient-to-t from-blue-900 to-transparent p-10 flex flex-col justify-end">
               <h3 className="text-3xl font-bold text-white mb-2">Cricket Academy</h3>
-              <p className="text-emerald-100 opacity-90">State-level pitches and professional nets for year-round practice.</p>
+              <p className="text-blue-100 opacity-90">State-level pitches and professional nets for year-round practice.</p>
             </div>
           </div>
           <div className="relative group overflow-hidden rounded-[2.5rem] shadow-2xl">
