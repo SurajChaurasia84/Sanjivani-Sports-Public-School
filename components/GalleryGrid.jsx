@@ -24,8 +24,8 @@ const GalleryGrid = ({ images }) => {
             onClick={() => setFilter(cat)}
             className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
               filter === cat
-                ? 'bg-emerald-600 text-white shadow-md'
-                : 'bg-white text-slate-600 border border-slate-200 hover:border-emerald-300 hover:text-emerald-600'
+                ? 'bg-blue-600 text-white shadow-md'
+                : 'bg-white text-slate-600 border border-slate-200 hover:border-blue-300 hover:text-blue-600'
             }`}
           >
             {cat}
@@ -56,7 +56,7 @@ const GalleryGrid = ({ images }) => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                 <p className="text-white font-medium mb-2">{img.caption}</p>
-                <span className="text-emerald-400 text-xs uppercase tracking-widest">{img.category}</span>
+                <span className="text-blue-400 text-xs uppercase tracking-widest">{img.category}</span>
                 <button 
                   onClick={() => setSelectedImage(img)}
                   className="absolute top-4 right-4 bg-white/20 backdrop-blur-md p-2 rounded-full text-white hover:bg-white/40 transition-colors"
@@ -80,7 +80,7 @@ const GalleryGrid = ({ images }) => {
             onClick={() => setSelectedImage(null)}
           >
             <button 
-              className="absolute top-6 right-6 text-white hover:text-emerald-400 transition-colors"
+              className="absolute top-6 right-6 text-white hover:text-blue-400 transition-colors"
               onClick={() => setSelectedImage(null)}
             >
               <X size={40} />
@@ -99,7 +99,7 @@ const GalleryGrid = ({ images }) => {
               />
               <div className="mt-4 text-center">
                 <h3 className="text-white text-xl font-bold">{selectedImage.caption}</h3>
-                <p className="text-emerald-400 uppercase tracking-widest text-sm mt-1">{selectedImage.category}</p>
+                <p className="text-blue-400 uppercase tracking-widest text-sm mt-1">{selectedImage.category}</p>
               </div>
             </motion.div>
           </motion.div>
