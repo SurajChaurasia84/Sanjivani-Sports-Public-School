@@ -22,7 +22,7 @@ export default async function HomePage() {
 
 
       {/* Highlights Section */}
-      <Section title="Why Sanjivani?" subtitle="We combine world-class sports facilities with a rigorous academic curriculum to build the leaders of tomorrow.">
+      <Section className="!pt-0" title="Why Sanjivani?" subtitle="We combine world-class sports facilities with a rigorous academic curriculum to build the leaders of tomorrow.">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {[
             { title: "Academic Rigor", desc: "Our CBSE-aligned curriculum is delivered through innovative project-based learning.", icon: BookOpen },
@@ -44,14 +44,19 @@ export default async function HomePage() {
       {/* Facilities Preview */}
       <Section className="bg-slate-50/50" title="Campus Excellence" subtitle="Premium infrastructure designed to maximize indoor and outdoor learning possibilities.">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
-          {featuredFacilities.map((facility) => (
-            <Card 
-              key={facility.id}
-              title={facility.name} 
-              description={facility.description}
-              imageUrl={`https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800`}
-            />
-          ))}
+          {[
+            { id: 1 },
+            { id: 2 },
+            { id: 3 }
+          ].map((facility, index) => {
+            const facilityImages = ['/assets/p1.webp', '/assets/p2.png', '/assets/p3.webp'];
+            return (
+              <Card 
+                key={facility.id}
+                imageUrl={facilityImages[index] || facilityImages[0]}
+              />
+            );
+          })}
         </div>
         <div className="text-center">
           <Link href="/facilities" className="inline-flex items-center gap-3 text-blue-700 font-black uppercase tracking-widest text-sm hover:gap-5 transition-all group">
@@ -130,16 +135,15 @@ export default async function HomePage() {
 
       {/* Gallery Showcase */}
       <Section className="bg-blue-950 text-white" title="The Sanjivani Experience" subtitle="Capturing the spirit of competition and academic breakthrough at our campus.">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           {previewImages.map((img) => (
-            <div key={img.id} className="aspect-[4/5] rounded-[2rem] overflow-hidden group shadow-2xl relative">
-              <img 
-                src={img.image} 
-                alt={img.caption}
-                className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 group-hover:rotate-2 opacity-80 group-hover:opacity-100"
-              />
-              <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform">
-                <p className="text-xs font-bold uppercase tracking-widest">{img.caption}</p>
+            <div key={img.id} className="group shadow-2xl relative bg-white rounded-[2rem] overflow-hidden border border-white/10">
+              <div className="relative aspect-[4/5] bg-blue-900/10 flex items-center justify-center p-2">
+                <img 
+                  src={img.image} 
+                  alt={img.caption}
+                  className="max-w-full max-h-full object-contain"
+                />
               </div>
             </div>
           ))}
