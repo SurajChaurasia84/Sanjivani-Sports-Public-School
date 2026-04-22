@@ -40,7 +40,7 @@ const Hero = () => {
     <section className="bg-white !pt-0 pb-12 md:pb-16 overflow-hidden">
       <div className="w-full">
         {/* Main Hero Container - Full Width */}
-        <div className="relative w-full h-[500px] md:h-[750px] bg-white overflow-hidden shadow-2xl group">
+        <div className="relative w-full h-[300px] md:h-[750px] bg-white overflow-hidden shadow-2xl group">
           
           {/* Background Image Slider */}
           <div className="absolute inset-0 z-0">
@@ -53,7 +53,7 @@ const Hero = () => {
                 exit={{ x: '-100%' }}
                 transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
                 alt={`School Campus ${currentIndex + 1}`}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-contain md:object-cover"
               />
             </AnimatePresence>
           </div>

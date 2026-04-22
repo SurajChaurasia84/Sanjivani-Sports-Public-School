@@ -126,7 +126,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-slate-800 text-center text-xs space-y-4">
-          <p>© {currentYear} Sanjivani Sports Public School. All rights reserved. Built with Next.js</p>
+          <p>© {currentYear} Sanjivani Sports Public School. All rights reserved.</p>
           <div className="flex justify-center gap-6">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>

@@ -99,29 +99,33 @@ export default async function HomePage() {
             {latestNotices.map((notice) => (
               <div key={notice.id} className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all group flex gap-8 items-start relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-blue-50/20 rounded-full translate-x-1/2 -translate-y-1/2 -z-0"></div>
-                <div className="bg-blue-900 text-white font-bold p-6 rounded-2xl flex flex-col items-center justify-center min-w-[110px] shadow-lg shadow-blue-200">
-                  <span className="text-3xl">{new Date(notice.date).getDate()}</span>
-                  <span className="text-xs uppercase tracking-[0.2em]">{new Date(notice.date).toLocaleString('default', { month: 'short' })}</span>
+                <div className="bg-blue-900 text-white font-bold p-4 rounded-xl flex flex-col items-center justify-center min-w-[90px] shadow-lg shadow-blue-200">
+                  <span className="text-2xl">{new Date(notice.date).getDate()}</span>
+                  <span className="text-[10px] uppercase tracking-[0.2em]">{new Date(notice.date).toLocaleString('default', { month: 'short' })}</span>
                 </div>
                 <div className="flex-grow relative z-10">
-                  <div className="flex items-center gap-3 mb-2">
-                    <h3 className="text-2xl font-black text-blue-950 group-hover:text-blue-700 transition-colors uppercase tracking-tight">{notice.title}</h3>
-                    {notice.isUrgent && <span className="bg-red-500 text-white text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-lg shadow-red-200 animate-pulse">Critical</span>}
+                  <div className="flex flex-wrap items-center gap-2 mb-2">
+                    <h3 className="text-lg md:text-xl font-black text-blue-950 group-hover:text-blue-700 transition-colors uppercase tracking-tight leading-tight">{notice.title}</h3>
+                    {notice.isUrgent && (
+                      <span className="flex-shrink-0 bg-red-500 text-white text-[7px] md:text-[9px] font-black px-2 py-0.5 rounded-full uppercase tracking-widest shadow-lg shadow-red-200 animate-pulse">
+                        Critical
+                      </span>
+                    )}
                   </div>
-                  <p className="text-slate-500 text-lg leading-relaxed line-clamp-2">{notice.description}</p>
-                  <Link href={`/notices`} className="text-blue-700 text-sm font-black mt-6 inline-block hover:underline uppercase tracking-widest">Notice Details</Link>
+                  <p className="text-slate-500 text-sm leading-relaxed line-clamp-2">{notice.description}</p>
+                  <Link href={`/notices`} className="text-blue-700 text-xs font-black mt-4 inline-block hover:underline uppercase tracking-widest">Notice Details</Link>
                 </div>
               </div>
             ))}
           </div>
           
-          <div className="bg-blue-950 rounded-[3rem] p-10 text-white relative overflow-hidden flex flex-col justify-between shadow-2xl shadow-blue-900/30">
+          <div className="bg-blue-950 rounded-[2.5rem] p-8 text-white relative overflow-hidden flex flex-col justify-between shadow-2xl shadow-blue-900/30">
             <div className="relative z-10">
-              <div className="w-20 h-20 bg-blue-800/50 rounded-full flex items-center justify-center mb-10 border border-blue-700/50">
-                <Bell className="text-blue-400" size={32} />
+              <div className="w-16 h-16 bg-blue-800/50 rounded-full flex items-center justify-center mb-8 border border-blue-700/50">
+                <Bell className="text-blue-400" size={28} />
               </div>
-              <h3 className="text-4xl font-bold mb-6 font-display leading-tight">Admissions Open 2026-27</h3>
-              <p className="text-blue-100/70 text-lg mb-12 leading-relaxed font-light">
+              <h3 className="text-2xl font-bold mb-4 font-display leading-tight">Admissions Open 2026-27</h3>
+              <p className="text-blue-100/70 text-sm mb-10 leading-relaxed font-light">
                 Join our elite community. Limited seats available from Nursery to Grade IX. Experience a global standard of educational excellence.
               </p>
             </div>
