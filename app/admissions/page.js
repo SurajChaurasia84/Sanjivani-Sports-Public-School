@@ -22,20 +22,9 @@ export default async function AdmissionsPage() {
 
   return (
     <div className="bg-white">
-      {/* Page Header */}
-      <div className="bg-blue-900 py-24 text-white relative overflow-hidden">
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold font-display uppercase tracking-widest mb-6">Join Our Community</h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto opacity-90 leading-relaxed font-medium">
-            Admissions for the Academic Session 2026-27 are now open.
-          </p>
-          <div className="w-24 h-1.5 bg-blue-500 mx-auto mt-8 rounded-full"></div>
-        </div>
-        <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-blue-800 rounded-full blur-3xl opacity-50"></div>
-      </div>
 
       {/* Admission Overview */}
-      <Section title="The Admission Process" subtitle="Simple and transparent steps to secure your child's future.">
+      <Section title="The Admission Process" className="!pt-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div className="space-y-8">
             <div className="bg-blue-50 p-8 rounded-[2rem] border border-blue-100 shadow-sm">
@@ -86,7 +75,7 @@ export default async function AdmissionsPage() {
       </Section>
 
       {/* Rules & Policies */}
-      <Section className="bg-slate-50" title="Rules & Policies" subtitle="Committed to maintaining a disciplined and safe environment.">
+      <Section className="bg-slate-50" title="Rules & Policies">
         <Accordion items={ruleItems} />
       </Section>
 
