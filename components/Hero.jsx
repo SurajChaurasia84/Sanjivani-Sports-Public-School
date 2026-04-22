@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BookOpen, Trophy, Users, Home as HostelIcon, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { BookOpen, Trophy, Users, Home as HostelIcon, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const heroImages = [
   '/hero/h1.jpg',
@@ -22,7 +22,7 @@ const Hero = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % heroImages.length);
-    }, 5000); // Change image every 5 seconds
+    }, 5000);
     return () => clearInterval(timer);
   }, []);
 
@@ -36,12 +36,12 @@ const Hero = () => {
 
   return (
     <section className="bg-white !pt-0 pb-12 md:pb-16 overflow-hidden">
-      <div className="container mx-auto px-4">
-        {/* Main Hero Container - 85% Width, Professional Academic Look */}
-        <div className="relative w-full lg:w-[85vw] mx-auto h-[500px] md:h-[700px] bg-white overflow-hidden shadow-2xl group">
+      <div className="w-full">
+        {/* Main Hero Container - Full Width */}
+        <div className="relative w-full h-[500px] md:h-[750px] bg-white overflow-hidden shadow-2xl group">
           
           {/* Background Image Slider */}
-          <div className="absolute inset-0">
+          <div className="absolute inset-0 z-0">
             <AnimatePresence initial={false}>
               <motion.img
                 key={currentIndex}
@@ -51,7 +51,7 @@ const Hero = () => {
                 exit={{ x: '-100%' }}
                 transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
                 alt={`School Campus ${currentIndex + 1}`}
-                className="absolute inset-0 w-full h-full object-cover z-10"
+                className="absolute inset-0 w-full h-full object-cover"
               />
             </AnimatePresence>
           </div>
