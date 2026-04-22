@@ -73,8 +73,14 @@ const Navbar = () => {
                 className="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-500" 
               />
             </div>
-            <div>
-              <span className="text-2xl md:text-3xl font-black text-blue-950 block leading-tight tracking-tighter">SSPS</span>
+            <div className="flex flex-col">
+              <div className="flex items-center gap-3">
+                <span className="text-2xl md:text-3xl font-black text-blue-950 block leading-tight tracking-tighter">SSPS</span>
+                <Link href="/admissions" className="hidden sm:flex items-center gap-1.5 px-3 py-1 bg-red-600 text-white rounded-full text-[9px] font-black uppercase tracking-widest animate-pulse shadow-lg shadow-red-200">
+                  <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
+                  Admission Open 2026-27
+                </Link>
+              </div>
               <span className="text-[10px] md:text-xs text-blue-700 font-bold uppercase tracking-[0.3em] block">Sanjivani Sports Public School</span>
             </div>
           </Link>
@@ -108,7 +114,7 @@ const Navbar = () => {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`px-5 py-5 text-[11px] font-bold uppercase tracking-widest transition-all duration-200 flex flex-col items-center justify-center relative group ${
+                  className={`px-5 py-3 text-[11px] font-bold uppercase tracking-widest transition-all duration-200 flex flex-col items-center justify-center relative group ${
                     isActive ? 'text-blue-700 font-black' : 'text-slate-500 hover:text-blue-700'
                   }`}
                 >
