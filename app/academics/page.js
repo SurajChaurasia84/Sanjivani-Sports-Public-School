@@ -42,13 +42,8 @@ export default async function AcademicsPage() {
 
   return (
     <div className="bg-white">
-      {/* Page Header */}
-      <div className="bg-blue-900 py-20 text-white text-center">
-        <h1 className="text-4xl md:text-5xl font-bold font-display uppercase tracking-widest text-shadow">Academics</h1>
-        <div className="w-24 h-1.5 bg-blue-500 mx-auto mt-6 rounded-full"></div>
-      </div>
 
-      <Section title="Overview" subtitle="Empowering students with a forward-thinking curriculum.">
+      <Section title="Overview" className="!pt-8">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-3xl p-10 md:p-16 shadow-2xl border border-blue-50 relative overflow-hidden group hover:border-blue-200 transition-all">
             <div className="relative z-10">
@@ -81,11 +76,11 @@ export default async function AcademicsPage() {
         </div>
       </Section>
 
-      <Section className="bg-slate-50" title="Scheme of Studies" subtitle="Grade-wise distribution of core and elective subjects.">
+      <Section className="bg-slate-50" title="Scheme of Studies">
         <Tabs tabs={tabs} />
       </Section>
 
-      <Section title="Evaluation System" subtitle="Continuous and Comprehensive Evaluation for overall mapping.">
+      <Section title="Evaluation System">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-white p-10 rounded-3xl shadow-xl border border-slate-100 flex flex-col items-center text-center">
             <div className="w-20 h-20 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6">

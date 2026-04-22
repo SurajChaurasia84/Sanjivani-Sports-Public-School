@@ -1,17 +1,21 @@
 {
-  "curriculumOverview": "We follow the CBSE curriculum, offering a comprehensive and balanced approach to education from Primary to Senior Secondary levels.",
+  "curriculumOverview": " Our schools follow the scheme of studies as prescribed in National Curriculum Framework-2005 by the National Council of Edcational Research & Training (NCERT) . The scheme of studies from pre-primary to Middle classes is mentioned below-",
   "schemeOfStudies": [
     {
-      "level": "Primary (I-V)",
-      "subjects": ["English", "Hindi", "Mathematics", "EVS", "Art", "Physical Education"]
+      "level": "Pre-Primary Classes",
+      "subjects": ["Hindi", "English", "Mathematics", "Art & Craft", "Music","General Awarness"]
     },
     {
-      "level": "Middle (VI-VIII)",
-      "subjects": ["English", "Hindi", "Sanskrit", "Mathematics", "Science", "Social Science", "Computer Science"]
+      "level": "Classes I & II",
+      "subjects": ["Hindi", "English", "Mathematics", "Environmental Studies", "Computer Education", "Art & Craft", "Music", "Health & Physical Education"]
     },
     {
-      "level": "Secondary (IX-X)",
-      "subjects": ["English", "Hindi/Sanskrit", "Mathematics", "Science", "Social Science", "Information Technology"]
+      "level": "Classes III to V",
+      "subjects": ["Hindi", "English", "Mathematics", "Science", "Social Studies", "Computer Education", "Art & Craft", "Music","Life Skills Education", "General Awarness", "Health & Physical Education"]
+    },
+    {
+      "level": "Classes VI to VIII",
+      "subjects": ["Hindi", "English", "Mathematics", "Science", "Social Science", "Sanskrit", "Computer Education", "Art & Craft", "Music","Life Skills Education", "General Awarness", "Health & Physical Education"]
     }
   ],
   "evaluationSystem": {
