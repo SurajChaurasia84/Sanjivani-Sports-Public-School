@@ -91,6 +91,12 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
+              <li>
+                <a href="/Application_form.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-white font-black transition-all flex items-center gap-2 group uppercase text-[10px] tracking-widest mt-4">
+                  <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+                  Admission Form (PDF)
+                </a>
+              </li>
             </ul>
           </div>
 
