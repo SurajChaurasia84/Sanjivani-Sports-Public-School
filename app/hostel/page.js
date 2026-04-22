@@ -14,20 +14,8 @@ export default async function HostelPage() {
 
   return (
     <div className="bg-white">
-      {/* Page Header */}
-      <div className="bg-blue-900 py-24 text-white relative overflow-hidden">
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold font-display uppercase tracking-widest mb-6">Residential Life</h1>
-          <p className="text-xl text-blue-100 max-w-2xl mx-auto opacity-80 leading-relaxed font-medium">
-            Providing a secure, nurturing, and disciplined home away from home.
-          </p>
-          <div className="w-24 h-1.5 bg-blue-500 mx-auto mt-8 rounded-full"></div>
-        </div>
-        {/* Decoration */}
-        <div className="absolute top-0 right-0 p-12 opacity-10"><Home size={300} /></div>
-      </div>
 
-      <Section title="Overview" subtitle="Everything you need to know about staying at SSPS.">
+      <Section title="Overview" className="!pt-8">
         <div className="flex flex-col md:flex-row gap-16 items-center">
           <div className="flex-1">
             <div className="relative p-1 bg-gradient-to-br from-blue-500 to-blue-600 rounded-[2.5rem]">
@@ -69,7 +57,7 @@ export default async function HostelPage() {
         </div>
       </Section>
 
-      <Section className="bg-slate-100" title="Hostel Amenities" subtitle="Comprehensive facilities to ensure a balanced lifestyle.">
+      <Section className="bg-slate-100" title="Hostel Amenities">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {data.facilities.map((facility, idx) => {
             const icons = {
@@ -96,7 +84,7 @@ export default async function HostelPage() {
       </Section>
 
       {/* Routine Section */}
-      <Section title="A Day at SSPS" subtitle="A structured schedule to balance academics, sports, and rest.">
+      <Section title="A Day at SSPS">
         <div className="max-w-4xl mx-auto">
           <div className="bg-blue-900 rounded-[3rem] p-12 text-white shadow-2xl relative overflow-hidden">
             <div className="relative z-10 space-y-6">
