@@ -4,6 +4,7 @@ import Accordion from '@/components/Accordion';
 import { getData } from '@/lib/data';
 import { ClipboardCheck, FileText, Scale, UserMinus, PhoneCall, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { getAssetPath } from '@/lib/utils';
 
 export const metadata = {
   title: 'Admissions',
@@ -91,7 +92,7 @@ export default async function AdmissionsPage() {
               </p>
               <div className="flex flex-wrap justify-center gap-6">
                 <a 
-                  href="/Application_form.pdf" 
+                  href={getAssetPath('/Application_form.pdf')} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-white text-blue-600 px-10 py-4 rounded-full font-bold text-lg flex items-center gap-2 hover:bg-blue-50 transition-all shadow-xl"
