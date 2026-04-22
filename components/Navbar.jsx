@@ -67,10 +67,10 @@ const Navbar = () => {
           {/* Logo Area */}
           <Link href="/" className="flex items-center gap-4 group">
             <div className="relative w-12 h-12 md:w-16 md:h-16 flex items-center justify-center p-1 bg-white rounded-xl shadow-sm border border-slate-100">
-              <img 
-                src="/logo.png" 
-                alt="SSPS Logo" 
-                className="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-500" 
+              <img
+                src="/logo.png"
+                alt="SSPS Logo"
+                className="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-500"
               />
             </div>
             <div className="flex flex-col">
@@ -87,11 +87,11 @@ const Navbar = () => {
 
           {/* Full Campus Address Link for Desktop */}
           <a href="https://maps.app.goo.gl/2zV2fLAfQxTD2Drj7" target="_blank" rel="noopener noreferrer" className="hidden lg:flex gap-3 items-center max-w-xs group/loc transition-all">
-             <MapPin size={24} className="text-blue-200 flex-shrink-0 group-hover/loc:text-blue-600 transition-colors" />
-             <div className="flex flex-col">
-                <span className="text-[10px] uppercase font-bold text-slate-400 tracking-widest leading-none mb-1">Campus Address</span>
-                <span className="text-[11px] font-black text-blue-950 leading-tight group-hover/loc:text-blue-700 transition-colors">Assam Road, Semarahana, Nainiha, Mihinpurwa (Bahraich)</span>
-             </div>
+            <MapPin size={24} className="text-blue-200 flex-shrink-0 group-hover/loc:text-blue-600 transition-colors" />
+            <div className="flex flex-col">
+              <span className="text-[10px] uppercase font-bold text-slate-400 tracking-widest leading-none mb-1">Campus Address</span>
+              <span className="text-[11px] font-black text-blue-950 leading-tight group-hover/loc:text-blue-700 transition-colors">Assam Road, Semarahana, Nainiha, Mihinpurwa (Bahraich)</span>
+            </div>
           </a>
 
           {/* Mobile Toggle */}
@@ -114,15 +114,14 @@ const Navbar = () => {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`px-5 py-3 text-[11px] font-bold uppercase tracking-widest transition-all duration-200 flex flex-col items-center justify-center relative group ${
-                    isActive ? 'text-blue-700 font-black' : 'text-slate-500 hover:text-blue-700'
-                  }`}
+                  className={`px-5 py-3 text-[11px] font-bold uppercase tracking-widest transition-all duration-200 flex flex-col items-center justify-center relative group ${isActive ? 'text-blue-700 font-black' : 'text-slate-500 hover:text-blue-700'
+                    }`}
                 >
                   <span className="relative">
                     {link.name}
                     {/* Active Indicator Line (Matches Text Width) */}
                     {isActive && (
-                      <motion.div 
+                      <motion.div
                         layoutId="navIndicator"
                         className="absolute -bottom-2 left-0 right-0 h-[3px] bg-blue-600 rounded-full"
                         transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
@@ -163,25 +162,24 @@ const Navbar = () => {
                     key={link.name}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className={`block px-8 py-4 text-xl font-bold border-l-4 transition-all ${
-                      pathname === link.href
+                    className={`block px-8 py-4 text-xl font-bold border-l-4 transition-all ${pathname === link.href
                         ? 'border-blue-400 bg-blue-900 text-white'
                         : 'border-transparent text-blue-100 hover:bg-blue-900/50'
-                    }`}
+                      }`}
                   >
                     {link.name}
                   </Link>
                 ))}
               </div>
               <div className="p-8 border-t border-white/10 bg-blue-900/40">
-                 <p className="text-[10px] text-blue-300 uppercase tracking-widest mb-4">Established by: Viklang Sewa Evam Technical Shiksha Sansthan</p>
-                 <div className="space-y-3">
-                    <a href="tel:09453544852" className="font-bold flex items-center gap-3"><Phone size={16} className="text-blue-400"/> 09453544852</a>
-                    <a href="mailto:sanjivanipublicschool2014@gmail.com" className="text-sm flex items-center gap-3"><Mail size={16} className="text-blue-400"/> sanjivanipublicschool2014@gmail.com</a>
-                    <a href="https://maps.app.goo.gl/2zV2fLAfQxTD2Drj7" target="_blank" rel="noopener noreferrer" className="text-xs text-blue-200/70 flex items-center gap-3 leading-relaxed mt-4 hover:text-white transition-colors">
-                      <MapPin size={16} className="text-blue-400 flex-shrink-0"/> Assam Road, Semarahana, Nainiha, Mihinpurwa (Bahraich)
-                    </a>
-                 </div>
+                <p className="text-[10px] text-blue-300 uppercase tracking-widest mb-4">Established by: Viklang Sewa Evam Technical Shiksha Sansthan</p>
+                <div className="space-y-3">
+                  <a href="tel:09453544852" className="font-bold flex items-center gap-3"><Phone size={16} className="text-blue-400" /> 09453544852</a>
+                  <a href="mailto:sanjivanipublicschool2014@gmail.com" className="text-sm flex items-center gap-3"><Mail size={16} className="text-blue-400" /> sanjivanipublicschool2014@gmail.com</a>
+                  <a href="https://maps.app.goo.gl/2zV2fLAfQxTD2Drj7" target="_blank" rel="noopener noreferrer" className="text-xs text-blue-200/70 flex items-center gap-3 leading-relaxed mt-4 hover:text-white transition-colors">
+                    <MapPin size={16} className="text-blue-400 flex-shrink-0" /> Assam Road, Semarahana, Nainiha, Mihinpurwa (Bahraich)
+                  </a>
+                </div>
               </div>
             </div>
           </motion.div>
