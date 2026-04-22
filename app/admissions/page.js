@@ -90,9 +90,14 @@ export default async function AdmissionsPage() {
                 Our admissions office is open Monday to Saturday, 9:00 AM to 3:00 PM.
               </p>
               <div className="flex flex-wrap justify-center gap-6">
-                <button className="bg-white text-blue-600 px-10 py-4 rounded-full font-bold text-lg flex items-center gap-2 hover:bg-blue-50 transition-all shadow-xl">
-                  Download Form <ArrowRight size={20} />
-                </button>
+                <a 
+                  href="/Application_form.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white text-blue-600 px-10 py-4 rounded-full font-bold text-lg flex items-center gap-2 hover:bg-blue-50 transition-all shadow-xl"
+                >
+                  Admission Form <ArrowRight size={20} />
+                </a>
                 <Link href="/contact" className="bg-blue-900/30 text-white border border-blue-400 px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-900/50 transition-all flex items-center gap-2">
                   <PhoneCall size={20} /> Contact Us
                 </Link>
