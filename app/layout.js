@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${inter.variable} ${outfit.variable} scroll-smooth`}>
       <body className="font-sans bg-slate-50 text-slate-900 flex flex-col min-h-screen">
         <Navbar />
-        <main className="flex-grow pt-[80px] md:pt-[200px]">
+        <main className="flex-grow pt-[80px] md:pt-[160px]">
           {children}
         </main>
         <Footer />
