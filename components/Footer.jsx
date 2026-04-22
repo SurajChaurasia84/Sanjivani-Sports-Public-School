@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { GraduationCap, Mail, Phone, MapPin, Globe } from 'lucide-react';
+import { getAssetPath } from '@/lib/utils';
 
 const YoutubeIcon = ({ size = 24 }) => (
   <svg 
@@ -29,7 +30,7 @@ const Footer = () => {
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-3">
               <div className="bg-white p-1 rounded-lg w-12 h-12 flex items-center justify-center">
-                <img src="/logo.png" alt="SSPS Logo" className="w-full h-full object-contain mix-blend-multiply" />
+                <img src={getAssetPath('/logo.png')} alt="SSPS Logo" className="w-full h-full object-contain mix-blend-multiply" />
               </div>
               <span className="text-lg font-bold text-white uppercase tracking-wider leading-tight">Sanjivani Sports <br />Public School</span>
             </Link>
@@ -92,7 +93,7 @@ const Footer = () => {
                 </li>
               ))}
               <li>
-                <a href="/Application_form.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-white font-black transition-all flex items-center gap-2 group uppercase text-[10px] tracking-widest mt-4">
+                <a href={getAssetPath('/Application_form.pdf')} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-white font-black transition-all flex items-center gap-2 group uppercase text-[10px] tracking-widest mt-4">
                   <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
                   Admission Form (PDF)
                 </a>

@@ -4,6 +4,7 @@ import Section from '@/components/Section';
 import Card from '@/components/Card';
 import Hero from '@/components/Hero';
 import { ArrowRight, BookOpen, Users, Trophy, Home as HostelIcon, Bell, GraduationCap, ArrowUpRight, FileText } from 'lucide-react';
+import { getAssetPath } from '@/lib/utils';
 
 export default async function HomePage() {
   const aboutData = await getData('about');
@@ -49,7 +50,11 @@ export default async function HomePage() {
             { id: 2 },
             { id: 3 }
           ].map((facility, index) => {
-            const facilityImages = ['/assets/p1.webp', '/assets/p2.png', '/assets/p3.webp'];
+            const facilityImages = [
+              getAssetPath('/assets/p1.webp'), 
+              getAssetPath('/assets/p2.png'), 
+              getAssetPath('/assets/p3.webp')
+            ];
             return (
               <Card 
                 key={facility.id}
@@ -128,7 +133,7 @@ export default async function HomePage() {
                 Start Application <ArrowUpRight size={22} />
               </Link>
               <a 
-                href="/Application_form.pdf"
+                href={getAssetPath('/Application_form.pdf')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-blue-600/30 text-white border border-blue-400/50 py-4 rounded-2xl font-bold text-center hover:bg-blue-600/50 transition-all flex items-center justify-center gap-3 uppercase tracking-widest text-sm"
@@ -150,7 +155,7 @@ export default async function HomePage() {
             <div key={img.id} className="group shadow-2xl relative bg-white rounded-[2rem] overflow-hidden border border-white/10">
               <div className="relative aspect-[4/5] bg-blue-900/10 flex items-center justify-center p-2">
                 <img 
-                  src={img.image} 
+                  src={getAssetPath(img.image)} 
                   alt={img.caption}
                   className="max-w-full max-h-full object-contain"
                 />

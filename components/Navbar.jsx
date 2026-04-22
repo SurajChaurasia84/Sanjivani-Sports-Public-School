@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X, Phone, MapPin, Mail, ShieldCheck } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { getAssetPath } from '@/lib/utils';
 
 const navLinks = [
   { name: 'Home', href: '/' },
@@ -61,48 +62,55 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* 2. Main Header Row (Logo & Brand) */}
+      {/* 2. Main Header Row */}
       <div className={`bg-white transition-all duration-300 ${scrolled ? 'py-1' : 'py-3'}`}>
         <div className="container mx-auto px-4 flex justify-between items-center">
-          {/* Logo Area - FIXED NESTED LINKS */}
-          <div className="flex items-center gap-4 group">
-            <Link href="/" className="flex items-center gap-4">
-              <div className="relative w-12 h-12 md:w-16 md:h-16 flex items-center justify-center p-1 bg-white rounded-xl shadow-sm border border-slate-100">
-                <img
-                  src="/logo.png"
-                  alt="SSPS Logo"
-                  className="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 hover:scale-110"
-                />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-2xl md:text-3xl font-black text-blue-950 block leading-tight tracking-tighter">SSPS</span>
-                <span className="text-[10px] md:text-xs text-blue-700 font-bold uppercase tracking-[0.3em] block">Sanjivani Sports Public School</span>
-              </div>
+          
+          <div className="flex items-center gap-4">
+            {/* Logo Link */}
+            <Link href="/" className="relative w-12 h-12 md:w-16 md:h-16 flex items-center justify-center p-1 bg-white rounded-xl shadow-sm border border-slate-100 group">
+              <img
+                src={getAssetPath('/logo.png')}
+                alt="SSPS Logo"
+                className="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-500"
+              />
             </Link>
-            
-            {/* Admission Tag - OUTSIDE the logo link */}
-            <Link href="/admissions" className="hidden sm:flex items-center gap-1.5 px-3 py-1 bg-red-600 text-white rounded-full text-[9px] font-black uppercase tracking-widest animate-pulse shadow-lg shadow-red-200 h-fit mt-1">
+
+            {/* Brand Text Area */}
+            <div className="flex flex-col">
+              <Link href="/" className="text-2xl md:text-3xl font-black text-blue-950 leading-tight tracking-tighter hover:text-blue-700 transition-colors">
+                SSPS
+              </Link>
+              <Link href="/" className="text-[10px] md:text-xs text-blue-700 font-bold uppercase tracking-[0.3em] block hover:text-blue-900 transition-colors">
+                Sanjivani Sports Public School
+              </Link>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-8">
+            {/* Admission Tag - Moved to the left of the address on Desktop */}
+            <Link href="/admissions" className="hidden lg:flex items-center gap-1.5 px-4 py-1.5 bg-red-600 text-white rounded-full text-[10px] font-black uppercase tracking-widest animate-pulse shadow-lg shadow-red-200">
               <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
               Admission Open 2026-27
             </Link>
-          </div>
 
-          {/* Full Campus Address Link for Desktop */}
-          <a href="https://maps.app.goo.gl/2zV2fLAfQxTD2Drj7" target="_blank" rel="noopener noreferrer" className="hidden lg:flex gap-3 items-center max-w-xs group/loc transition-all">
-            <MapPin size={24} className="text-blue-200 flex-shrink-0 group-hover/loc:text-blue-600 transition-colors" />
-            <div className="flex flex-col">
-              <span className="text-[10px] uppercase font-bold text-slate-400 tracking-widest leading-none mb-1">Campus Address</span>
+            {/* Full Campus Address Link for Desktop */}
+            <a href="https://maps.app.goo.gl/2zV2fLAfQxTD2Drj7" target="_blank" rel="noopener noreferrer" className="hidden lg:flex gap-3 items-center max-w-xs group/loc transition-all">
+              <MapPin size={24} className="text-blue-200 flex-shrink-0 group-hover/loc:text-blue-600 transition-colors" />
+              <div className="flex flex-col">
+                <span className="text-[10px] uppercase font-bold text-slate-400 tracking-widest leading-none mb-1">Campus Address</span>
               <span className="text-[11px] font-black text-blue-950 leading-tight group-hover/loc:text-blue-700 transition-colors">Assam Road, Semarahana, Nainiha, Mihinpurwa (Bahraich)</span>
-            </div>
-          </a>
+              </div>
+            </a>
 
-          {/* Mobile Toggle */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-slate-600 hover:text-blue-700 transition-colors"
-          >
-            {isOpen ? <X size={32} /> : <Menu size={32} />}
-          </button>
+            {/* Mobile Toggle */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="lg:hidden p-2 text-slate-600 hover:text-blue-700 transition-colors"
+            >
+              {isOpen ? <X size={32} /> : <Menu size={32} />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -151,9 +159,19 @@ const Navbar = () => {
             <div className="flex flex-col h-full">
               <div className="flex justify-between items-center p-6 border-b border-white/10">
                 <span className="text-2xl font-black">SSPS</span>
-                <button onClick={() => setIsOpen(false)} className="p-2 bg-white/10 rounded-full">
-                  <X size={24} />
-                </button>
+                <div className="flex items-center gap-4">
+                  <Link 
+                    href="/admissions" 
+                    onClick={() => setIsOpen(false)}
+                    className="flex items-center gap-1.5 px-3 py-1 bg-red-600 text-white rounded-full text-[8px] font-black uppercase tracking-widest animate-pulse shadow-lg shadow-red-200"
+                  >
+                    <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
+                    Admission Open
+                  </Link>
+                  <button onClick={() => setIsOpen(false)} className="p-2 bg-white/10 rounded-full">
+                    <X size={24} />
+                  </button>
+                </div>
               </div>
               <div className="flex-grow overflow-y-auto py-8">
                 {navLinks.map((link) => (

@@ -5,15 +5,17 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BookOpen, Trophy, Users, Home as HostelIcon, ChevronLeft, ChevronRight } from 'lucide-react';
 
+import { getAssetPath } from '@/lib/utils';
+
 const heroImages = [
-  '/hero/h1.jpg',
-  '/hero/h2.jpg',
-  '/hero/h3.jpg',
-  '/hero/h4.jpg',
-  '/hero/h5.jpg',
-  '/hero/h6.jpg',
-  '/hero/h7.jpg',
-  '/hero/h8.webp'
+  getAssetPath('/hero/h1.jpg'),
+  getAssetPath('/hero/h2.jpg'),
+  getAssetPath('/hero/h3.jpg'),
+  getAssetPath('/hero/h4.jpg'),
+  getAssetPath('/hero/h5.jpg'),
+  getAssetPath('/hero/h6.jpg'),
+  getAssetPath('/hero/h7.jpg'),
+  getAssetPath('/hero/h8.webp')
 ];
 
 const Hero = () => {
