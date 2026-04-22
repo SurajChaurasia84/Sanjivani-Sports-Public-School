@@ -2,26 +2,26 @@
   {
     "id": 1,
     "category": "Campus",
-    "image": "https://images.unsplash.com/photo-1541339906699-bc0560a887f3?q=80&w=1000",
-    "caption": "Main School Building"
+    "image": "/assets/a1.png",
+    "caption": "Campus Academic Block"
   },
   {
     "id": 2,
     "category": "Sports",
-    "image": "https://images.unsplash.com/photo-1587280501635-a19de238a81e?q=80&w=1000",
-    "caption": "School Football Ground"
+    "image": "/assets/a2.png",
+    "caption": "Sports Training Session"
   },
   {
     "id": 3,
     "category": "Events",
-    "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1000",
-    "caption": "Annual Prize Distribution"
+    "image": "/assets/a3.png",
+    "caption": "School Assembly Area"
   },
   {
     "id": 4,
     "category": "Activities",
-    "image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1000",
-    "caption": "Science Lab Session"
+    "image": "/assets/a4.webp",
+    "caption": "Student Creative Workshop"
   },
   {
     "id": 5,
