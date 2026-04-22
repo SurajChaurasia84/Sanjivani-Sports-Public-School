@@ -26,13 +26,67 @@
   {
     "id": 5,
     "category": "Campus",
-    "image": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1000",
-    "caption": "Library Reading Area"
+    "image": "/assets/p1.webp",
+    "caption": "Classroom Values"
   },
   {
     "id": 6,
     "category": "Sports",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=1000",
-    "caption": "Basketball Match"
+    "image": "/assets/p2.png",
+    "caption": "Morning Assembly"
+  },
+  {
+    "id": 7,
+    "category": "Activities",
+    "image": "/assets/p3.webp",
+    "caption": "Student Discipline"
+  },
+  {
+    "id": 8,
+    "category": "Campus",
+    "image": "/hero/h1.jpg",
+    "caption": "Campus View 1"
+  },
+  {
+    "id": 9,
+    "category": "Campus",
+    "image": "/hero/h2.jpg",
+    "caption": "Campus View 2"
+  },
+  {
+    "id": 10,
+    "category": "Campus",
+    "image": "/hero/h3.jpg",
+    "caption": "Campus View 3"
+  },
+  {
+    "id": 11,
+    "category": "Campus",
+    "image": "/hero/h4.jpg",
+    "caption": "Campus View 4"
+  },
+  {
+    "id": 12,
+    "category": "Campus",
+    "image": "/hero/h5.jpg",
+    "caption": "Campus View 5"
+  },
+  {
+    "id": 13,
+    "category": "Campus",
+    "image": "/hero/h6.jpg",
+    "caption": "Campus View 6"
+  },
+  {
+    "id": 14,
+    "category": "Campus",
+    "image": "/hero/h7.jpg",
+    "caption": "Campus View 7"
+  },
+  {
+    "id": 15,
+    "category": "Campus",
+    "image": "/hero/h8.webp",
+    "caption": "Campus View 8"
   }
 ]
