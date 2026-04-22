@@ -21,27 +21,25 @@ export default async function HomePage() {
       <Hero />
 
 
-      <div className="pt-24 md:pt-40">
-        {/* Highlights Section */}
-        <Section title="Why Sanjivani?" subtitle="We combine world-class sports facilities with a rigorous academic curriculum to build the leaders of tomorrow.">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-            {[
-              { title: "Academic Rigor", desc: "Our CBSE-aligned curriculum is delivered through innovative project-based learning.", icon: BookOpen },
-              { title: "Elite Sports", desc: "Comprehensive training in Cricket, Tennis, and Swimming by national-level coaches.", icon: Trophy },
-              { title: "Residential Life", desc: "A home away from home with premium amenities and 24/7 student support.", icon: HostelIcon },
-              { title: "Global Values", desc: "Fostering integrity, discipline, and leadership through value-based education.", icon: Users },
-            ].map((item, idx) => (
-              <Card 
-                key={idx}
-                title={item.title} 
-                description={item.desc}
-                icon={item.icon}
-                className="bg-white border-slate-100 shadow-xl shadow-slate-100/50 hover:border-blue-200"
-              />
-            ))}
-          </div>
-        </Section>
-      </div>
+      {/* Highlights Section */}
+      <Section title="Why Sanjivani?" subtitle="We combine world-class sports facilities with a rigorous academic curriculum to build the leaders of tomorrow.">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          {[
+            { title: "Academic Rigor", desc: "Our CBSE-aligned curriculum is delivered through innovative project-based learning.", icon: BookOpen },
+            { title: "Elite Sports", desc: "Comprehensive training in Cricket, Tennis, and Swimming by national-level coaches.", icon: Trophy },
+            { title: "Residential Life", desc: "A home away from home with premium amenities and 24/7 student support.", icon: HostelIcon },
+            { title: "Global Values", desc: "Fostering integrity, discipline, and leadership through value-based education.", icon: Users },
+          ].map((item, idx) => (
+            <Card 
+              key={idx}
+              title={item.title} 
+              description={item.desc}
+              icon={item.icon}
+              className="bg-white border-slate-100 shadow-xl shadow-slate-100/50 hover:border-blue-200"
+            />
+          ))}
+        </div>
+      </Section>
 
       {/* Facilities Preview */}
       <Section className="bg-slate-50/50" title="Campus Excellence" subtitle="Premium infrastructure designed to maximize indoor and outdoor learning possibilities.">
