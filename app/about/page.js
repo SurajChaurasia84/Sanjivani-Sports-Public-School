@@ -61,10 +61,10 @@ export default async function AboutPage() {
               </div>
               <div className="flex items-center justify-center p-8 lg:p-12">
                 <div className="relative p-1 bg-white rounded-[1.5rem] shadow-xl border-1 border-blue-100 transform hover:scale-[1.02] transition-transform duration-500">
-                  <img
-                    src="/Yoga.jpg"
-                    alt="Academic Excellence"
-                    className="w-full h-auto max-w-[400px] rounded-3xl object-cover shadow-inner"
+                  <img 
+                    src="/Yoga.jpg" 
+                    alt="Academic Excellence" 
+                    className="w-full h-auto max-w-[400px] rounded-3xl object-cover"
                   />
                   {/* Accent Decoration */}
                   <div className="absolute -top-4 -right-4 w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg rotate-12">
