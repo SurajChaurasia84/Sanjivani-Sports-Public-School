@@ -23,19 +23,8 @@ export default async function FacilitiesPage() {
 
   return (
     <div className="bg-white">
-      {/* Page Header */}
-      <div className="bg-blue-900 py-24 text-white text-center relative overflow-hidden">
-        <div className="relative z-10">
-          <h1 className="text-5xl md:text-6xl font-bold font-display uppercase tracking-widest mb-6">Our Infrastructure</h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto opacity-80 leading-relaxed px-4">
-            World-class facilities designed to foster academic growth and athletic excellence.
-          </p>
-          <div className="w-24 h-1.5 bg-blue-500 mx-auto mt-8 rounded-full"></div>
-        </div>
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-      </div>
 
-      <Section title="Premium Facilities" subtitle="We invest in the best to ensure our students have everything they need to succeed.">
+      <Section title="Premium Facilities" className="!pt-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {data.facilities.map((facility) => {
             const Icon = icons[facility.icon] || Sparkles;
@@ -97,7 +86,7 @@ export default async function FacilitiesPage() {
       </section>
 
       {/* Sports Detail Section */}
-      <Section title="Athletic Arena" subtitle="True to our name, sports is at the core of everything we do.">
+      <Section title="Athletic Arena">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="relative group overflow-hidden rounded-[2.5rem] shadow-2xl">
             <img 
