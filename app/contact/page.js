@@ -11,19 +11,8 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <div className="bg-white">
-      {/* Page Header */}
-      <div className="bg-blue-900 py-24 text-white text-center relative overflow-hidden">
-        <div className="relative z-10">
-          <h1 className="text-5xl md:text-6xl font-bold font-display uppercase tracking-widest mb-6">Contact Us</h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto opacity-80 px-4">
-            We are here to answer your questions and welcome you to our campus.
-          </p>
-          <div className="w-24 h-1.5 bg-blue-500 mx-auto mt-8 rounded-full"></div>
-        </div>
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
-      </div>
 
-      <Section>
+      <Section className="!pt-8">
         <div className="flex flex-col lg:flex-row gap-16">
           {/* Contact Information */}
           <div className="lg:w-1/3 space-y-10">
@@ -36,7 +25,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="text-lg font-bold text-slate-900 mb-1">Our Location</h4>
-                    <a href="https://maps.app.goo.gl/2zV2fLAfQxTD2Drj7" target="_blank" rel="noopener noreferrer" className="text-slate-600 leading-relaxed font-medium hover:text-blue-600 transition-colors">Assam Road, Semarahana, Nainiha, Mihinpurwa (Bahraich)</a>
+                    <a href="https://maps.app.goo.gl/2zV2fLAfQxTD2Drj7" target="_blank" rel="noopener noreferrer" className="text-slate-600 leading-relaxed font-medium hover:text-blue-600 transition-colors italic">Assam Road, Semarahana, Nainiha, Mihinpurwa (Bahraich)</a>
                   </div>
                 </div>
                 <div className="flex gap-6 items-start">
@@ -92,9 +81,15 @@ export default function ContactPage() {
         </div>
       </Section>
 
+      {/* Map Section Heading (Outside) */}
+      <div className="container mx-auto px-4 pt-10 pb-10 text-center">
+        <h2 className="text-3xl md:text-5xl font-black text-blue-950 uppercase tracking-tight leading-none mb-4">Visit Our School Campus</h2>
+        <div className="w-24 h-1.5 bg-blue-600 mx-auto rounded-full mb-6"></div>
+        <p className="text-sm text-slate-500 font-bold uppercase tracking-[0.3em]">Sanjivani Sports Public School</p>
+      </div>
 
       {/* Map Section - Official Google Maps Embed */}
-      <div className="w-full h-[500px] border-t border-slate-100 shadow-inner group relative overflow-hidden">
+      <div className="w-full h-[600px] border-y border-slate-100 shadow-2xl group relative overflow-hidden">
         <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3522.258875239489!2d81.30156247992012!3d28.016562510944315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3998938040000001%3A0xebb3ef11576daa43!2sSanjivani%20Sports%20Public%20School%20%26%20Hostel!5e0!3m2!1sen!2sin!4v1776781131073!5m2!1sen!2sin" 
           className="w-full h-full grayscale hover:grayscale-0 transition-all duration-700" 
@@ -103,12 +98,6 @@ export default function ContactPage() {
           loading="lazy" 
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
-        <div className="absolute top-6 left-6 pointer-events-none">
-          <div className="bg-white/90 backdrop-blur-md px-6 py-4 rounded-2xl shadow-2xl border border-white/50">
-            <p className="font-black text-blue-950 uppercase tracking-tight">Visit Our Campus</p>
-            <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest mt-1">Sanjivani Sports Public School</p>
-          </div>
-        </div>
       </div>
     </div>
   );
