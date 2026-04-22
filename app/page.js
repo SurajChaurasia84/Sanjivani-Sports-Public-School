@@ -3,7 +3,7 @@ import { getData } from '@/lib/data';
 import Section from '@/components/Section';
 import Card from '@/components/Card';
 import Hero from '@/components/Hero';
-import { ArrowRight, BookOpen, Users, Trophy, Home as HostelIcon, Bell, GraduationCap, ArrowUpRight } from 'lucide-react';
+import { ArrowRight, BookOpen, Users, Trophy, Home as HostelIcon, Bell, GraduationCap, ArrowUpRight, FileText } from 'lucide-react';
 
 export default async function HomePage() {
   const aboutData = await getData('about');
@@ -120,12 +120,22 @@ export default async function HomePage() {
                 Join our elite community. Limited seats available from Nursery to Grade IX. Experience a global standard of educational excellence.
               </p>
             </div>
-            <Link 
-              href="/admissions" 
-              className="bg-white text-blue-950 py-5 rounded-2xl font-black text-center relative z-10 hover:bg-blue-50 transition-all flex items-center justify-center gap-3 uppercase tracking-widest shadow-xl"
-            >
-              Start Application <ArrowUpRight size={22} />
-            </Link>
+            <div className="flex flex-col gap-4 relative z-10">
+              <Link 
+                href="/admissions" 
+                className="bg-white text-blue-950 py-5 rounded-2xl font-black text-center hover:bg-blue-50 transition-all flex items-center justify-center gap-3 uppercase tracking-widest shadow-xl"
+              >
+                Start Application <ArrowUpRight size={22} />
+              </Link>
+              <a 
+                href="/Application_form.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-600/30 text-white border border-blue-400/50 py-4 rounded-2xl font-bold text-center hover:bg-blue-600/50 transition-all flex items-center justify-center gap-3 uppercase tracking-widest text-sm"
+              >
+                Admission Form <FileText size={18} />
+              </a>
+            </div>
             {/* Geometric Decoration */}
             <div className="absolute top-0 right-0 w-64 h-64 border border-white/5 rounded-full translate-x-1/3 -translate-y-1/3"></div>
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-blue-800/20 rounded-xl -rotate-12 translate-y-1/2 -translate-x-1/2"></div>
