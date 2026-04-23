@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Maximize2, X } from 'lucide-react';
+import { getAssetPath } from '@/lib/utils';
 
 const GalleryGrid = ({ images }) => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -50,7 +51,7 @@ const GalleryGrid = ({ images }) => {
               className="relative group aspect-video overflow-hidden rounded-xl bg-slate-100 shadow-md"
             >
               <img
-                src={img.image}
+                src={getAssetPath(img.image)}
                 alt={img.caption}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
@@ -93,7 +94,7 @@ const GalleryGrid = ({ images }) => {
               onClick={(e) => e.stopPropagation()}
             >
               <img
-                src={selectedImage.image}
+                src={getAssetPath(selectedImage.image)}
                 alt={selectedImage.caption}
                 className="w-full h-auto max-h-[85vh] object-contain rounded-lg shadow-2xl"
               />
